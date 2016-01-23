@@ -1,0 +1,18 @@
+EE 403W Project Statement
+Team: JAK-EE chan
+Members: Jeremy Doll, Ahmad Mostafa, Keil Toso
+January 22, 2016
+
+Team JAK-EE chan will develop a portable speaker system with light-emitting diodes (LED’s) to output audio from a Bluetooth-capable device. The speaker circuitry will be designed and built by the team members. LED’s will illuminate in various patterns and colors depending on user-input as well as the song being played. A broad, high-level view of the system can be visualized in figure 1, below.
+
+
+Figure 1: Block diagram of the Bluetooth speaker system.
+
+ 
+A Bluetooth interfacing device will be purchased to realize the wireless communication of audio from devices, such as smartphones, to the speaker system. The Bluetooth module will be a receiver that converts the signal to a serial signal, using a protocol such as UART or RS232, so that the data can be read by a microcontroller. Possible Bluetooth devices include the KEDSUM Arduino Wireless Bluetooth Transceiver Module, or the HC-05 Bluetooth to UART Converter. If necessary, an Arduino Uno may be interfaced between the Bluetooth module and the primary microcontroller, the Teensy 3.2 USB Development board. To program, interface with, and debug the microcontroller, Team JAK-EE chan will use the Teensy Loader Application, as well as the Arduino IDE with the Teensyduino add-on. Alternatively, the WinAVR C Compiler may be utilized if it presents fewer issues than the Arduino IDE. 
+
+The Teensy Audio Adapter board will also be used for processing the audio signals before outputting audio to the speakers and deciding how to control the LED’s. Accordingly, the Teensy Audio Library will provide audio processing capabilities using the Audio System Design Tool. Waveform synthesis, mixing, and audio output can be applied, as well as the fast Fourier Transform (FFT), for use in spectral analysis of the frequency components. Three strips of LED’s will be displayed on the front of the speaker system, representing the bass, mid-tone, and treble frequencies of the audio. The LED strip for the bass frequencies will illuminate LED’s when the power levels of the lower frequencies exceed a certain threshold. The greater the power level, the greater the number of LED’s that will be illuminated. This concept will be extended to the two other LED strips.
+
+The device will be no larger than 30 cm x 30 cm x 30 cm. The shape of the device, however, is yet to be determined. Externally, the device will contain three main components: a liquid crystal display (LCD), three LED strips, and two speakers. The audio from the Bluetooth device will go through conditioning circuitry on a printed circuit board (PCB) before being output to the speakers. The LCD enables users access to the configurable options of the system. These options will be contained within a menu, and will include volume adjustment, LED color control, and equalizer settings. The team plans to use a touchscreen display for this purpose, specifically, the Color 320x240 TFT Touchscreen and ILI9341 Controller Chip. Additionally, an auxiliary port will be included on the outside of the system as an alternative to wireless playback.
+
+A 1000 mAh battery will be used to provide the Bluetooth speakers with 9 hours of playback time. The battery will be placed inside the device and is charged externally using a micro-USB port. Any power socket or USB power supply will be sufficient. A toggle switch will be situated on the outside of the device to the turn the speakers on and off.
